@@ -1,0 +1,15 @@
+<p-dialog [(visible)]="visible" [modal]="true" [closable]="true" [header]="header" (onHide)="onHide()">
+    
+    <ng-template pTemplate="content">
+        @if (data) {
+            <div>
+                @for (item of columns; track item) {
+                    <div >
+                      <strong>{{ item.header }}: </strong>{{ data[item.field] }}
+                    </div>
+                }
+            </div>
+        }
+    </ng-template>
+  </p-dialog>
+  

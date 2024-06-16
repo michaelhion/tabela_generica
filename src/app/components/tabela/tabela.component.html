@@ -1,0 +1,25 @@
+<p-table 
+    [value]="data" 
+    [paginator]="true" 
+    [rowsPerPageOptions]="[5, 10, 20]"
+    [rows]="10" 
+    [responsive]="true" 
+    responsiveLayout="stack"
+    >
+    <ng-template pTemplate="header">
+      <tr>
+        @for (col of columns; track col) {
+            <th >{{ col.header}}</th>
+        }
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData>
+      <tr (click)="showDetails(rowData)">
+        @for (item of columns; track item) {
+            
+            <td >{{ formatValue(rowData[item.field],item) }}</td>
+        }
+      </tr>
+    </ng-template>
+  </p-table>
+  

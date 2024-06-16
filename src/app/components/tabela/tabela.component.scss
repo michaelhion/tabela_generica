@@ -1,0 +1,15 @@
+:host ::ng-deep {
+  th{
+    background-color:black;
+    color: white;
+    font-weight:bold;
+  }
+  tr:hover{
+    color: white;
+    font-weight: bold;
+    transition: background-color 1500ms linear;
+    background-color: var(--laranja);
+    cursor: pointer;
+  }
+  
+}
