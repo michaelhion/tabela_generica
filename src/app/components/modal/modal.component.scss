@@ -1,20 +1,18 @@
-:host ::ng-deep{
-    .p-dialog{
-        min-width: 700px;
-        .ng-star-inserted{
-            padding: 3px 3px;
-        }
-    }
-    .p-dialog-header{
-        height: 50px;
-        background-color: var(--laranja);
-        color: white;
-    }
-    .p-dialog-content{
-        padding-top: 5px;
-    }
-    .p-dialog-header-close-icon{
-        color: white;
-    }
-   
+:host ::ng-deep {
+  display: flex;
+  align-items: center;
+  .p-dialog {
+    min-width: 800px;
+  }
+  .p-dialog-header {
+    height: 50px;
+    background-color: var(--laranja);
+    color: white;
+  }
+  .p-dialog-content {
+    padding-top: 5px;
+  }
+  .p-dialog-header-close-icon {
+    color: white;
+  }
 }

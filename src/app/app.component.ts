@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
   ];
   modalTopics: any[] = [
     {
-      label: 'Old Revision',
+      label: 'Revisão antiga',
       columns: [
         { field: 'revisao', header: 'Revisão' },
         { field: 'revisao_anterior', header: 'Revisão Anterior' },
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
       revision: 'old_rev'
     },
     {
-      label: 'New Revision',
+      label: 'Revisão atual',
       columns: [
         { field: 'revisao', header: 'Revisão' },
         { field: 'revisao_anterior', header: 'Revisão Anterior' },
@@ -99,7 +99,7 @@ export class AppComponent implements OnInit {
   }
 
  showModal(item: Tipo) {
-   this.getComparacao(item.revisao,item.revisao_anterior);
+   this.getComparacao(item.revisao_anterior,item.revisao);
     
     this.display = true;
   }
