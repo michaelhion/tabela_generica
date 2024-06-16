@@ -1,5 +1,6 @@
 export interface Tipo {
   revisao: string;
+  revisao_anterior: string;
   nome: string;
   idEndereco: string;
   banco_associado: string;

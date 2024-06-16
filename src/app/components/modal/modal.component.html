@@ -1,15 +1,33 @@
-<p-dialog [(visible)]="visible" [modal]="true" [closable]="true" [header]="header" (onHide)="onHide()">
-    
-    <ng-template pTemplate="content">
+<p-dialog
+  [(visible)]="visible"
+  [modal]="true"
+  [closable]="true"
+  [header]="header"
+  (onHide)="onHide()"
+>
+  <ng-template pTemplate="content">
+    <div class="modal-content">
+      <div class="modal-body">
         @if (data) {
-            <div>
-                @for (item of columns; track item) {
-                    <div >
-                      <strong>{{ item.header }}: </strong>{{ data[item.field] }}
-                    </div>
-                }
+        <div class="row">
+          @for (topic of topics; track topic) {
+          <ng-container>
+            <div class="col">
+              <h3>{{ topic.label }}</h3>
+              @for (item of topic.columns; track item) {
+              <div>
+                <div>
+                  <strong>{{ item.header }}:</strong>
+                  {{ formatValue(data[topic.revision][item.field], item) }}
+                </div>
+              </div>
+              }
             </div>
+          </ng-container>
+          }
+        </div>
         }
-    </ng-template>
-  </p-dialog>
-  
+      </div>
+    </div>
+  </ng-template>
+</p-dialog>

@@ -1,30 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-modal',
-  standalone: true,
-  imports: [DialogModule,ButtonModule],
-  templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss'
+@Injectable({
+  providedIn: 'root'
 })
-export class ModalComponent implements OnInit{
-  ngOnInit(): void {
-    console.log("estou no modal ",this.data);
-    
-  }
-  @Input() visible: boolean = false;
-  @Input() header: string = 'Detalhes';
-  @Input() data: any;
-  @Input() columns: { field: string, header: string }[] = [];
-  @Input() topics: any[] = [];
+export class FormaterService {
 
-  @Output() visibleChange = new EventEmitter<boolean>();
-
-  onHide() {
-    this.visibleChange.emit(false);
-  }
+  constructor() { }
 
   formatValue(value: any, column: any): string {
     if (column.type === 'date') {
