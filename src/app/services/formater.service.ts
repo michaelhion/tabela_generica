@@ -1,13 +1,9 @@
-import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class FormaterService {
+export class Formater {
 
   constructor() { }
 
-  formatValue(value: any, column: any): string {
+  public formatValue(value: any, column: any): string {
     if (column.type === 'date') {
       return new Date(value).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
     } else if (column.type === 'currency') {

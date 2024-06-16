@@ -17,7 +17,7 @@
       <tr (click)="showDetails(rowData)">
         @for (item of columns; track item) {
             
-            <td >{{ formatValue(rowData[item.field],item) }}</td>
+            <td >{{ formater.formatValue(rowData[item.field],item) }}</td>
         }
       </tr>
     </ng-template>

@@ -15,4 +15,15 @@
   .p-dialog-header-close-icon {
     color: white;
   }
+
+  .custom-old-rev {
+    background-color: #f8d7da; /* Exemplo de fundo vermelho claro para campos old_rev */
+    color: #721c24; /* Cor do texto para campos old_rev */
+  }
+  
+  .custom-new-rev {
+    background-color: #d1ecf1; /* Exemplo de fundo azul claro para campos new_rev */
+    color: #0c5460; /* Cor do texto para campos new_rev */
+  }
+  
 }
